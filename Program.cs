@@ -75,7 +75,25 @@ namespace Demmo_OOP_02
             notebook.AddPerson(1, "Samy", 456);
             notebook.AddPerson(2, "Ahmed", 789);
 
+            for(int i =0; i <notebook.Size; i++)
+            {
+                Console.WriteLine(notebook[i]);
+            }
 
+            foreach(var person in notebook)
+            {
+                Console.WriteLine(person);
+            }
+            //int SamysNumber = notebook.GetNumber("Samy");
+            //Console.WriteLine(SamysNumber);
+
+            //notebook.SetNumbers("Samy", 999);
+
+            notebook["Samy"] = 999;//Set using indexer as a setter
+            Console.WriteLine(notebook["Mona"]);// get using indexer as a getter
+
+            string name = "Route";
+            Console.WriteLine(name[0]);
             #endregion
         }
     }
